@@ -54,14 +54,14 @@ public class PlayerUnknownCircleBoard extends JPanel {
 		g.setColor(Color.black);
 		int innerX = circle.getInnerCircleX();
 		int innerY = circle.getInnerCircleY();
-		int innerRadius = circle.getInnerCircleRadius();
-		g.drawOval(innerX + SPACING, innerY + SPACING, innerRadius * 2, innerRadius * 2);
+		int innerDiameter = circle.getInnerCircleRadius() * 2;
+		g.drawOval(innerX + SPACING, innerY + SPACING, innerDiameter, innerDiameter);
 		
 		// Paint active circle
 		g.setColor(Color.blue);
-		int x = circle.getActiveCircleX();
-		int y = circle.getActiveCircleY();
-		int diameter = circle.getActiveCircleRadius() * 2;
-		g.drawOval(x + SPACING, y + SPACING, diameter, diameter);
+		int activeX = circle.getActiveCircleX();
+		int activeY = circle.getActiveCircleY();
+		int activeDiameter = circle.getActiveCircleRadius() * 2;
+		g.drawOval(activeX + SPACING, activeY + SPACING, activeDiameter, activeDiameter);
 	}
 }
